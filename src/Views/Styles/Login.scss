@@ -1,0 +1,74 @@
+$main-black: rgb(35, 35, 35);
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('/src/assets/PressStart2P-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Login {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    min-height: 100vh;
+    max-width: 60%;
+    margin: auto;
+    padding-top: 25vh;
+    font-family: 'Press Start 2P';
+
+    .rabbit-gif {
+        img {
+            width: 60%;
+        }
+    }
+
+    #NameForm {
+        label { 
+            display: block;
+            margin-bottom: 1rem;
+            white-space: nowrap;
+         }
+        div {
+            display: flex;
+            justify-content: space-between;
+            input { 
+                font-size: 1em;
+                flex: 3;
+                margin-right: 1rem;
+                padding-left: 1rem;
+                padding-top: 4px;
+                border: none;
+                background: $main-black;
+                box-shadow: 0px 4px 0px 0px $main-black;
+                &:focus {
+                    outline: none;
+                }
+             }
+            button { 
+                flex: 1;
+                color: $main-black;
+                background: transparent;
+                border: 1px solid $main-black;
+                box-shadow: 4px 4px 0px 0px $main-black;
+                &:hover {
+                    box-shadow: none;
+                    transform: translate(4px, 4px);
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    #NameForm {
+        label { 
+            font-size: .7em;
+        }
+        button {
+            font-size: .7em;
+        }
+    }
+}
