@@ -1,1 +1,1 @@
-# The Outer Space Connector# outer-space-connector
+# The Outer Space Connector
