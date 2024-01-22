@@ -53,6 +53,7 @@ $main-black: rgb(35, 35, 35);
                 box-shadow: 4px 4px 0px 0px $main-black;
                 &:hover {
                     box-shadow: none;
+                    box-shadow: inset .5px .5px $main-black;
                     transform: translate(4px, 4px);
                     cursor: pointer;
                 }
