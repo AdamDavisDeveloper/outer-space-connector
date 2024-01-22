@@ -2,12 +2,19 @@ import { useState } from 'react';
 import BlackRabbit from '../assets/black-rabbit.gif';
 import './Styles/Login.scss'
 
-function Login () {
+function Login (props: {
+    setUserName: (input: string) => void
+}) {
     const [ nameValue, setNameValue ] = useState("");
 
     const handleNameChange = (event: any) => {
-        setNameValue(event.target.value);
+        const inputVal = event.target.value;
+        setNameValue(inputVal);
     };
+    const handleEnter = () => {
+        props.setUserName(nameValue);
+        localStorage.setItem("name", nameValue);
+    }
 
     return (
         <>
@@ -19,7 +26,7 @@ function Login () {
                 <label htmlFor="NameForm">What do you want to be called?</label>
                 <div>
                     <input value={nameValue} onChange={handleNameChange} type="text" />
-                    <button>ENTER</button>
+                    <button onClick={handleEnter}>ENTER</button>
                 </div>
             </div>
         </div>

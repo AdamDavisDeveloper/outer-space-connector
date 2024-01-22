@@ -12,10 +12,12 @@ $main-black: rgb(35, 35, 35);
     flex-direction: column;
     place-items: center;
     min-height: 100vh;
-    max-width: 60%;
+    width: 100%;
     margin: auto;
     padding-top: 25vh;
     font-family: 'Press Start 2P';
+    color: $main-black;
+    background: white;
 
     .rabbit-gif {
         img {

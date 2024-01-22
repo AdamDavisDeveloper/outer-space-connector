@@ -1,7 +1,15 @@
+import Stars from '../assets/stars.svg'
+import './Styles/Location.scss'
+
 function Location () {
     return (
         <>
-        <h1>The Outer Space Connector</h1>
+        <div 
+        id="Location"
+        >
+            <img src={Stars} alt="Stars" />
+            <h1>The Outer Space Connector</h1>
+        </div>
         </>
     )
 }
