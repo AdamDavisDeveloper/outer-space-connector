@@ -1,4 +1,4 @@
-export function coordinatesToEncryptedString(latitude: number, longitude: number, key: number): string {
+export function coordinatesToURLEncryptedString(latitude: number, longitude: number, key: number): string {
     // Convert coordinates to a binary string
     const toBinary = (num: number): string => 
         num.toString().replace('.', '').split('').map(n => n.charCodeAt(0).toString(2)).join(' ');
@@ -9,20 +9,36 @@ export function coordinatesToEncryptedString(latitude: number, longitude: number
     // XOR encryption
     const xorEncrypt = (binaryStr: string): string => {
         return binaryStr.split(' ').map(num => 
-            parseInt(num, 2) ^ key
-        ).join(' ');
+            String.fromCharCode(parseInt(num, 2) ^ key)
+        ).join('');
     };
 
-    return xorEncrypt(binaryLat) + '-' + xorEncrypt(binaryLong);
+    let encryptedData = xorEncrypt(binaryLat) + '-' + xorEncrypt(binaryLong);
+
+    // Convert to Base64 for URL safety
+    let base64 = btoa(encryptedData);
+
+    // Make URL-safe and remove '=' padding
+    return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-export function encryptedStringToCoordinates(encryptedStr: string, key: number): {latitude: number, longitude: number} {
-    const [encryptedLat, encryptedLong] = encryptedStr.split('-');
+
+
+
+export function URLEncryptedStringToCoordinates(encryptedStr: string, key: number): {latitude: number, longitude: number} {
+    // Replace URL-safe characters and add padding if necessary
+    let base64 = encryptedStr.replace(/-/g, '+').replace(/_/g, '/');
+    let paddingNeeded = (4 - base64.length % 4) % 4;
+    base64 += "=".repeat(paddingNeeded);
+
+    // Convert from Base64
+    let decodedData = atob(base64);
+    const [encryptedLat, encryptedLong] = decodedData.split('-');
 
     // XOR decryption (same as encryption)
     const xorDecrypt = (encrypted: string): string => {
-        return encrypted.split(' ').map(num => 
-            String.fromCharCode(parseInt(num, 10) ^ key)
+        return encrypted.split('').map(char => 
+            String.fromCharCode(char.charCodeAt(0) ^ key)
         ).join('');
     };
 

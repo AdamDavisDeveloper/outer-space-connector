@@ -20,7 +20,10 @@ function App() {
 
   useEffect(() => {
     setUserName(localStorage.getItem("name") ?? "");
-    setMessages([{name: "Adam", date: "04-23-2023", text: "What is this?"}]);
+    setMessages([
+      {name: "Adam", date: "04-23-2023", text: "What is this?"},
+      {name: "Micah", date: "07-04-2024", text: "Let's all be friends."}
+    ]);
   }, []);
 
 //   useEffect(() => {
