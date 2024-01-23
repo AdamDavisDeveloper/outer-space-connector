@@ -20,6 +20,8 @@ $main-black: rgb(35, 35, 35);
     background: white;
 
     .rabbit-gif {
+        display: flex;
+        justify-content: center;
         img {
             width: 60%;
         }
