@@ -1,6 +1,6 @@
 import Stars from '../assets/stars.svg'
 import BusStop from '../assets/dithered-bus-stop.png'
-import Message from '../Components/Message';
+import { AllMessages } from '../Components/AllMessages';
 import { IMessage } from '../Interfaces/Message';
 import { URLEncryptedStringToCoordinates } from '../Helpers/CoordsEncrypt';
 
@@ -16,15 +16,6 @@ const locationID = pathSegments[1] ?? "";
 //const encrypted = coordinatesToURLEncryptedString(43.0590269, -83.3245282, 12);
 const decrypted = URLEncryptedStringToCoordinates(locationID, 12);
 
-const AllMessages = (messagesData: IMessage[]) => {
-    const messagesTSX = messagesData.map((message, i) => {
-        return (
-            <Message key={i} name={message.name} date={message.date} text={message.text} />
-        )
-    });
-    return messagesTSX;
-}
-
 function Location (props: {
     userName: string,
     messagesData: IMessage[]
@@ -35,6 +26,7 @@ function Location (props: {
             <header>
                 <img id="StarsSVG" src={Stars} alt="Stars" />
                 <h1>The Outer Space Connector</h1>
+                <span>It's the talk of the town!</span>
                 <div id="BusStop">
                     <img src={BusStop} alt="Bus stop on the moon" />
                 </div>
