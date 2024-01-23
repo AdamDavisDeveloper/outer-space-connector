@@ -1,29 +1,22 @@
 import Stars from '../assets/stars.svg'
 import BusStop from '../assets/dithered-bus-stop.png'
+import Message from '../Components/Message';
+import { IMessage } from '../Interfaces/Message';
+import { URLEncryptedStringToCoordinates } from '../Helpers/CoordsEncrypt';
+
+// Styles
 import './Styles/Location.scss'
-import { coordinatesToURLEncryptedString, URLEncryptedStringToCoordinates } from '../Helpers/CoordsEncrypt';
-
-interface Message {
-    name: string;
-    date: string;
-    text: string;
-}
-
-const encrypted = coordinatesToURLEncryptedString(43.0590269, -83.3245282, 12);
-const decrypted = URLEncryptedStringToCoordinates(encrypted, 12);
 
 
-function Message (data: Message) {
-    return (
-    <div className="message">
-        <span className='name-label'>{data.name}</span>
-        <span className='date-label'>{data.date}</span>
-        <p>{data.text}</p>
-    </div>
-    )
-}
+const currentUrl = window.location.href;
+const url = new URL(currentUrl);
+const pathSegments = url.pathname.split('/');
+const locationID = pathSegments[1] ?? "";
 
-const AllMessages = (messagesData: Message[]) => {
+//const encrypted = coordinatesToURLEncryptedString(43.0590269, -83.3245282, 12);
+const decrypted = URLEncryptedStringToCoordinates(locationID, 12);
+
+const AllMessages = (messagesData: IMessage[]) => {
     const messagesTSX = messagesData.map((message, i) => {
         return (
             <Message key={i} name={message.name} date={message.date} text={message.text} />
@@ -34,7 +27,7 @@ const AllMessages = (messagesData: Message[]) => {
 
 function Location (props: {
     userName: string,
-    messagesData: Message[]
+    messagesData: IMessage[]
 }) {
     return (
         <>
@@ -45,7 +38,7 @@ function Location (props: {
                 <div id="BusStop">
                     <img src={BusStop} alt="Bus stop on the moon" />
                 </div>
-                <span>{ `${encrypted}` }</span>
+                <span>{ `${locationID}` }</span>
                 <br />
                 <span>{ `${decrypted.latitude}, ${decrypted.longitude}` }</span>
             </header>

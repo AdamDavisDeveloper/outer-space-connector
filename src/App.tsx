@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.scss'
 import Location from './Views/Location';
 import Login from './Views/Login';
-
-interface Message {
-  name: string;
-  date: string;
-  text: string;
-}
+import { IMessage } from './Interfaces/Message';
 
 function App() {
   /* 
@@ -16,7 +11,7 @@ function App() {
   */
 
   const [ userName, setUserName ]   = useState("");
-  const [ messages, setMessages ]   = useState<Message[]>([]);
+  const [ messages, setMessages ]   = useState<IMessage[]>([]);
 
   useEffect(() => {
     setUserName(localStorage.getItem("name") ?? "");
