@@ -4,8 +4,9 @@ import { AllMessages } from '../Components/AllMessages';
 import { IMessage } from '../Interfaces/Message';
 import { URLEncryptedStringToCoordinates } from '../Helpers/CoordsEncrypt';
 
-// Firebase
-//import firebaseApp from '../Firebase/config';
+// Firebase / Firestore
+import firestoreDB from '../Firebase/firestore';
+import { getDocs, collection } from "firebase/firestore"; 
 
 // Styles
 import './Styles/Location.scss'
@@ -19,10 +20,31 @@ const locationID = pathSegments[1] ?? "";
 //const encrypted = coordinatesToURLEncryptedString(43.0590269, -83.3245282, 12);
 const decrypted = URLEncryptedStringToCoordinates(locationID, 12);
 
+async function queryMessages() {
+  const messagesRef = collection(firestoreDB, 'Locations', locationID, 'Messages');
+  try {
+    const snapshot = await getDocs(messagesRef);
+    if (snapshot.empty) {
+      console.log('No matching documents in Messages subcollection.');
+      return;
+    }
+    snapshot.forEach(doc => {
+      console.log(doc.id, '=>', doc.data());
+    });
+  } catch (error) {
+    console.error('Error fetching messages:', error);
+  }
+}
+
+
+
 function Location (props: {
     userName: string,
     messagesData: IMessage[]
 }) {
+    
+    queryMessages();
+
     return (
         <>
         <div id="Location" >

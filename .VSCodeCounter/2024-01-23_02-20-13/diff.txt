@@ -1,0 +1,47 @@
+Date : 2024-01-23 02:20:13
+Directory : /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Views
+Total : 13 files,  -244 codes, -30 comments, -41 blanks, all -315 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript     |          3 |        -15 |         -2 |         -3 |        -20 |
+| SCSS           |          2 |        -29 |         -1 |         -7 |        -37 |
+| TypeScript JSX |          6 |        -93 |        -27 |        -30 |       -150 |
+| XML            |          2 |       -107 |          0 |         -1 |       -108 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                   |         13 |       -244 |        -30 |        -41 |       -315 |
+| ..                                                                                  |         13 |       -244 |        -30 |        -41 |       -315 |
+| .. (Files)                                                                          |          5 |        -67 |        -21 |        -21 |       -109 |
+| ../Components                                                                       |          2 |        -20 |          0 |         -2 |        -22 |
+| ../Firebase                                                                         |          2 |        -15 |         -1 |         -2 |        -18 |
+| ../Helpers                                                                          |          1 |        -30 |         -8 |        -15 |        -53 |
+| ../Interfaces                                                                       |          1 |         -5 |          0 |          0 |         -5 |
+| ../assets                                                                           |          2 |       -107 |          0 |         -1 |       -108 |
++-------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                            | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/App.scss                   | SCSS           |         -1 |          0 |          0 |         -1 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/App.tsx                    | TypeScript JSX |        -29 |        -19 |        -11 |        -59 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Components/AllMessages.tsx | TypeScript JSX |        -10 |          0 |         -1 |        -11 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Components/Message.tsx     | TypeScript JSX |        -10 |          0 |         -1 |        -11 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Firebase/config.ts         | TypeScript     |        -11 |         -1 |         -1 |        -13 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Firebase/firestore.ts      | TypeScript     |         -4 |          0 |         -1 |         -5 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Helpers/CoordsEncrypt.tsx  | TypeScript JSX |        -30 |         -8 |        -15 |        -53 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Interfaces/Message.tsx     | TypeScript JSX |         -5 |          0 |          0 |         -5 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/assets/react.svg           | XML            |         -1 |          0 |          0 |         -1 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/assets/stars.svg           | XML            |       -106 |          0 |         -1 |       -107 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/index.scss                 | SCSS           |        -28 |         -1 |         -7 |        -36 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/main.tsx                   | TypeScript JSX |         -9 |          0 |         -2 |        -11 |
+| /Users/dreamcom/Desktop/MyCode/outer-space-connector/src/vite-env.d.ts              | TypeScript     |          0 |         -1 |         -1 |         -2 |
+| Total                                                                               |                |       -244 |        -30 |        -41 |       -315 |
++-------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

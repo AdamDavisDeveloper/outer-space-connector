@@ -1,0 +1,15 @@
+"filename", "language", "TypeScript JSX", "SCSS", "XML", "TypeScript", "comment", "blank", "total"
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/App.scss", "SCSS", 0, -1, 0, 0, 0, 0, -1
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/App.tsx", "TypeScript JSX", -29, 0, 0, 0, -19, -11, -59
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Components/AllMessages.tsx", "TypeScript JSX", -10, 0, 0, 0, 0, -1, -11
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Components/Message.tsx", "TypeScript JSX", -10, 0, 0, 0, 0, -1, -11
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Firebase/config.ts", "TypeScript", 0, 0, 0, -11, -1, -1, -13
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Firebase/firestore.ts", "TypeScript", 0, 0, 0, -4, 0, -1, -5
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Helpers/CoordsEncrypt.tsx", "TypeScript JSX", -30, 0, 0, 0, -8, -15, -53
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/Interfaces/Message.tsx", "TypeScript JSX", -5, 0, 0, 0, 0, 0, -5
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/assets/react.svg", "XML", 0, 0, -1, 0, 0, 0, -1
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/assets/stars.svg", "XML", 0, 0, -106, 0, 0, -1, -107
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/index.scss", "SCSS", 0, -28, 0, 0, -1, -7, -36
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/main.tsx", "TypeScript JSX", -9, 0, 0, 0, 0, -2, -11
+"/Users/dreamcom/Desktop/MyCode/outer-space-connector/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, -1, -1, -2
+"Total", "-", -93, -29, -107, -15, -30, -41, -315
