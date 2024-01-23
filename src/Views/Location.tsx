@@ -4,6 +4,9 @@ import { AllMessages } from '../Components/AllMessages';
 import { IMessage } from '../Interfaces/Message';
 import { URLEncryptedStringToCoordinates } from '../Helpers/CoordsEncrypt';
 
+// Firebase
+//import firebaseApp from '../Firebase/config';
+
 // Styles
 import './Styles/Location.scss'
 

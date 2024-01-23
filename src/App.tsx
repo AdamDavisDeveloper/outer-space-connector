@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
-import './App.scss'
 import Location from './Views/Location';
 import Login from './Views/Login';
 import { IMessage } from './Interfaces/Message';
+//import firebaseApp from './Firebase/config';
+
+// Styles
+import './App.scss'
+
 
 function App() {
   /* 
