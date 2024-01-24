@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 import Location from './Views/Location';
+import Admin from './Views/Admin';
 import Login from './Views/Login';
 import { IMessage } from './Interfaces/Message';
 
 // Firebase / Firestore
 import firestoreDB from './Firebase/firestore';
 import { 
-    getDocs, 
-    collection, 
-    //doc, 
-    //setDoc 
+    getDocs,
+    collection,
 } from "firebase/firestore";
 
 // Styles
@@ -64,8 +63,11 @@ async function queryMessages() {
     }
   }
 
-
-  return (
+  if(locationID === "admin") {
+    return (
+      <Admin />
+    )
+  } else return (
     <>
     <div id="App">
       { !userName &&

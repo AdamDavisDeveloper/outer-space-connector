@@ -1,7 +1,7 @@
-export function coordinatesToURLEncryptedString(latitude: number, longitude: number, key: number): string {
+export function coordinatesToURLEncryptedString(latitude: string, longitude: string, key: number): string {
     // Convert coordinates to a binary string
-    const toBinary = (num: number): string => 
-        num.toString().replace('.', '').split('').map(n => n.charCodeAt(0).toString(2)).join(' ');
+    const toBinary = (num: string): string => 
+        num.replace('.', '').split('').map(n => n.charCodeAt(0).toString(2)).join(' ');
 
     let binaryLat = toBinary(latitude);
     let binaryLong = toBinary(longitude);
