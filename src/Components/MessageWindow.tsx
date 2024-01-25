@@ -1,5 +1,6 @@
 import { useState } from "react";
 import sendMessage from "../Helpers/SendMessage";
+import XSquare from '../assets/XSquare.svg';
 
 function MessageWindow (props: {
     userName: string,
@@ -27,7 +28,7 @@ function MessageWindow (props: {
         <div id="CreateMessageWindow">
             <div className="message-heading">
                 <h2>Leave a message for other travellers.</h2>
-                <button onClick={() => {props.setMessageWindowOpen(false)}}>X</button>
+                <img onClick={() => {props.setMessageWindowOpen(false)}} src={XSquare} alt="Close message form" />
             </div>
 
             <div className="messageForm">
