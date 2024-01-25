@@ -3,7 +3,7 @@ import firestoreDB from '../Firebase/firestore';
 import { collection, doc, setDoc } from "firebase/firestore";
 import { IMessage } from '../Interfaces/Message';
   
-const createMessage = async (messageData: IMessage, locationID: string) => {
+const sendMessage = async (messageData: IMessage, locationID: string) => {
     try {
         // Create a new document reference with an auto-generated ID
         const docRef = doc(collection(firestoreDB, 'Locations', locationID, 'Messages'));
@@ -15,4 +15,4 @@ const createMessage = async (messageData: IMessage, locationID: string) => {
     }
 };
 
-export default createMessage;
+export default sendMessage;

@@ -23,7 +23,7 @@ function App() {
   //const encrypted = coordinatesToURLEncryptedString(43.0590269, -83.3245282, 12);
   //const decrypted = URLEncryptedStringToCoordinates(locationID, 12);
 
-  const [ userName, setUserName ]   = useState("");
+  const [ userName, setUserName ]   = useState<string>("");
   const [ messages, setMessages ]   = useState<IMessage[]>([]);
   const locationID = new URL(window.location.href).pathname.split('/')[1] ?? "";
   
