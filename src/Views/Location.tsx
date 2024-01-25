@@ -35,6 +35,7 @@ function Location (props: {
                     <div id="MessagesWrapper">
                         { AllMessages(props.messagesData) }
                     </div>
+                    <div className="underline-100 mar-t-1rem"></div>
                     <button onClick={() => { setMessageWindowOpen(true) }}>Leave a Message</button>
                 </div>
             }

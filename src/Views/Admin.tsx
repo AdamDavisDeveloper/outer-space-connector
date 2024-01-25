@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import './Styles/Admin.scss'
-import createFirestoreLocation from "../Helpers/CreateLocation";
+//import createFirestoreLocation from "../Helpers/CreateLocation";
 import { coordinatesToURLEncryptedString } from "../Helpers/CoordsEncrypt";
 import QRCode from "react-qr-code";
 

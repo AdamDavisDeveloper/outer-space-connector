@@ -29,8 +29,9 @@ $main-black: rgb(15, 15, 15);
 #MessageBoard {
     h2 { margin-bottom: 0; }
     #MessagesWrapper {
-        max-height: 20rem;
+        max-height: 30rem;
         overflow: scroll;
+        overflow-x: hidden;
     }
 }
 
@@ -39,6 +40,9 @@ $main-black: rgb(15, 15, 15);
     background: rgba(255, 255, 255, 0.50);
     width: 100%;
     margin-bottom: 1rem;
+}
+.mar-t-1rem {
+    margin-top: 1rem;
 }
 
 #CreateMessageWindow {
@@ -66,7 +70,7 @@ $main-black: rgb(15, 15, 15);
     padding: .5rem .25rem;
     border: 1px solid rgba(255, 255, 255, 0.423);
     border-radius: 3px;
-    width: 98%;
+    width: 97%;
     margin: auto;
     margin-bottom: .5rem;
     p {
